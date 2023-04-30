@@ -1,0 +1,11 @@
+{
+	"name": "Dashboard1",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "PowerBIWorkspace",
+		"typeProperties": {
+			"tenantID": "188fec8b-b243-4ac8-a958-2ed4079439e1"
+		}
+	}
+}
