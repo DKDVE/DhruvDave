@@ -39,7 +39,11 @@
 						"referenceName": "DestinationASA",
 						"type": "DatasetReference"
 					},
-					"name": "DestASA"
+					"name": "DestASA",
+					"rejectedDataLinkedService": {
+						"referenceName": "dkdres-WorkspaceDefaultStorage",
+						"type": "LinkedServiceReference"
+					}
 				}
 			],
 			"transformations": [
@@ -194,6 +198,7 @@
 				"          {Shipping Cost} as string,",
 				"          {Order Priority} as string",
 				"     ),",
+				"     partitionFileNames:['Finalfile.txt'],",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
