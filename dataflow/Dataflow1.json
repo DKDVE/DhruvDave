@@ -194,6 +194,7 @@
 				"          {Shipping Cost} as string,",
 				"          {Order Priority} as string",
 				"     ),",
+				"     partitionFileNames:['final.txt'],",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
