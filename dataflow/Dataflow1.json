@@ -164,7 +164,8 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source4",
-				"source1, source2, source3, source4 union(byName: true)~> Merge",
+				"source1, source2, source3, source4 union(byName: true,",
+				"     partitionBy('hash', 1))~> Merge",
 				"Merge sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
@@ -197,7 +198,8 @@
 				"     preCommands: [],",
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> DestASA"
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> DestASA"
 			]
 		}
 	}
